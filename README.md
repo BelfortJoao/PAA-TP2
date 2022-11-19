@@ -1,7 +1,7 @@
 # Viagens intergaláticas
-> Trabalho Prático 01 – Projeto e Analise de Algoritimos – Trios
+> Trabalho Prático 02 – Projeto e Analise de Algoritimos – Trios
 ## Descrição:
-Projetar um algoritmo com backtracking para encontrar um caminho, seguindo a sequencia de fibonacci em uma matriz, neste contexto, implementá-lo em C e documentá-lo, conforme as especificações dadas.
+implementar, utilizando programação dinâmica, um algoritmo que informe quantos caminhos com custo mínimo existem entre viagens intergaláticas.
 
 # Colaboradores
 ## João Victor
