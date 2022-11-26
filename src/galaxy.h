@@ -5,6 +5,9 @@ typedef struct mapaGalatico{
     int largura;
     int altura;
     int** pesos;
+    int* sol;
+    int** caminhos;
+    int** qtdcaminhos;
 }MapaGalatico;
 
 void inicializaMatriz(MapaGalatico* map);

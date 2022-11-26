@@ -1,8 +1,7 @@
 #include <string.h>
 #include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include "achaCaminho.h"
+#include "criaTeste.h"
 #define PATH_ARQUIVO "../input/"
 int main(){
     int escolha;
@@ -19,8 +18,10 @@ int main(){
         int altura,  largura;
         FILE *pArquivo = NULL;
         char nomeArquivo[CHAR_MAX];
-
+        int idFile;
         int menor;
+        int** matriz;
+
         switch (escolha)
         {
             default:
@@ -31,8 +32,13 @@ int main(){
                 exit(0);
 
             case 1:
-                printf("user");
-                //buscaCaminho(&mat, analise);
+                printf("Insira um número para identificar o arquivo: ");
+                scanf("%d", &idFile);
+                printf("Altura: ");
+                scanf("%d",&altura);
+                printf("Largura: ");
+                scanf("%d",&largura);
+                criaTxt(idFile,altura, largura, matriz);
                 break;
             case 2:
                 printf("Escreva o nome do arquivo");
@@ -54,19 +60,18 @@ int main(){
                 //ERRO PARA RESOLVER
 //-----------------------------------------------------------------------------------------
                 inicializaMatriz(&map);
-
-                for (int i = 0; i < altura; ++i)
+                for (int i = 0; i < map.altura; ++i)
                 {
-                    for (int j = 0; j < largura; ++j)
+                    for (int j = 0; j < map.largura; ++j)
                     {
                         fscanf(pArquivo,"%d ",&map.matriz[i][j]);
-                        printf("%d . \n",map.matriz[i][j]);
                     }
                 }
 //-----------------------------------------------------------------------------------------
                 fclose(pArquivo);
                 pArquivo = NULL;
-                menorTamanho(&map);
+                printf("\nSoma minima: %d\n",menorTamanho(&map));
+                printf("Quantidade de Caminhos: %d", caminhosNumeros(&map));
                 break;
 
 

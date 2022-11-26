@@ -67,6 +67,12 @@ build CMakeFiles/src.dir/achaCaminho.c.o: C_COMPILER__src_Debug /home/belfort/fa
   OBJECT_DIR = CMakeFiles/src.dir
   OBJECT_FILE_DIR = CMakeFiles/src.dir
 
+build CMakeFiles/src.dir/criaTeste.c.o: C_COMPILER__src_Debug /home/belfort/faculdade/PAA/TP2/PAA-TP2/src/criaTeste.c || cmake_object_order_depends_target_src
+  DEP_FILE = CMakeFiles/src.dir/criaTeste.c.o.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles/src.dir
+  OBJECT_FILE_DIR = CMakeFiles/src.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target src
@@ -75,7 +81,7 @@ build CMakeFiles/src.dir/achaCaminho.c.o: C_COMPILER__src_Debug /home/belfort/fa
 #############################################
 # Link the executable src
 
-build src: C_EXECUTABLE_LINKER__src_Debug CMakeFiles/src.dir/main.c.o CMakeFiles/src.dir/galaxy.c.o CMakeFiles/src.dir/achaCaminho.c.o
+build src: C_EXECUTABLE_LINKER__src_Debug CMakeFiles/src.dir/main.c.o CMakeFiles/src.dir/galaxy.c.o CMakeFiles/src.dir/achaCaminho.c.o CMakeFiles/src.dir/criaTeste.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/src.dir
   POST_BUILD = :
