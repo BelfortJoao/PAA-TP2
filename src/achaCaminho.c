@@ -1,4 +1,9 @@
 #include "achaCaminho.h"
+//Acha o peso do menor caminho de uma array, salvando os pesos e seus caminhos, e o retorna.
+//input:
+//  mapa: estrutra de dados mapa galatico contendo a matriz de pesos e a matriz original.
+//output:
+//  peso: ultima posição da matriz de pesos representando o menor peso geral da matriz.
 int menorTamanho(MapaGalatico* mapa) {
 
     mapa->pesos[0][0] = mapa->matriz[0][0];
@@ -32,6 +37,11 @@ int menorTamanho(MapaGalatico* mapa) {
     mapa->sol[(mapa->largura+mapa->altura-1)*2-2]= mapa->altura-1;
     return mapa->pesos[mapa->altura-1][mapa->largura-1];
 }
+
+//ERRO A SER CONCERTADO PARA FUNCIONAR
+//Imprime a solução do vetor SOL dentro da estrutura de dados
+//input:
+//  mapa: Estrutura de dados mapa galatico contendo o vetor SOL
 void printSolucao(MapaGalatico* map){
     int i = 0;
     while (1) {
@@ -42,6 +52,12 @@ void printSolucao(MapaGalatico* map){
     }
 }
 
+//Calcula com base na matriz de pesos a quantidade de caminhos possiveis com menor peso inserindo-os na matriz
+//qtdcaminhos
+//input:
+//  mapa: estrutura de dados contendo a matriz de quantidade de caminhos a amtriz pesos e a matriz original.
+//output:
+//  qtdcaminhos: posição inicial  da matriz quantidade de caminhos  essa posição é a quantidade maxima de caminhos.
 int caminhosNumeros(MapaGalatico* mapa){
     mapa->qtdcaminhos[mapa->altura-1][mapa->largura-1]=1;
     for (int i = mapa->altura-1; i >= 0; --i) {
@@ -63,7 +79,11 @@ int caminhosNumeros(MapaGalatico* mapa){
     return mapa->qtdcaminhos[0][0];
 }
 
-//Não usado atualmente
+//Não usado atualmente NESCESSARIO PARA TAREFA EXTRA 3 E 4.
+
+//cria uma matriz onde coloca 1 em locais onde é possivel passar e 0 onde não é possivel
+// input:
+//  mpapa: mapa contendo todas as matrizes nescessarias para achar as matrizes de caminhos.
 void caminhosIguais(MapaGalatico* mapa){
     mapa->caminhos[0][0]=1;
     mapa->caminhos[mapa->altura-1][mapa->largura-1]=1;
@@ -87,6 +107,7 @@ void caminhosIguais(MapaGalatico* mapa){
 }
 
 //Função para achar possiveis caminhos entre as diagonais de uma array de 0 ou 1
+//FUNÇÃO PARA USAR TODOS OS VALORES DA ARRAY DE CAMINHOS E ACHAR TODOS OS POSSIVEIS CAMINHOS.
 void achaCaminho(MapaGalatico* mapa){
 
 }

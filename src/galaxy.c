@@ -1,5 +1,9 @@
 #include "galaxy.h"
 
+//Inicializa as matrizes e os Arrays da estrutura de dados MapaGalatico, alocando-os na mémoria dinamica e definindo os
+// seus valores padrão.
+//inputs:
+//  map: estrutura de dados para ser inicializada.
 void inicializaMatriz(MapaGalatico* map){
 
     map->matriz = (int **) malloc(sizeof(int *) * map->altura);

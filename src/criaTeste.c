@@ -7,7 +7,13 @@
 #define LOWER 1
 #define NOME_ARQUIVO "../input/teste"
 
-
+// Função para criar números aleatorios e inseri-los em uma matriz de inteiros
+//input:
+//  matriz: Matriz para se escrever os números aleatorias, e ser alocada dinamicamente na memoria.
+//  altura: Altura da matriz, eixo y.
+//  largura: Largura da matriz, eito x.
+//output:
+//  matriz: Matriz alocada na mémoria e com números aleatorios inseridos.
 int** criaTeste(int** matriz, int altura, int largura){
     matriz = (int**) malloc(sizeof(int*)*altura);
 
@@ -23,6 +29,12 @@ int** criaTeste(int** matriz, int altura, int largura){
     return matriz;
 }
 
+//Função que cria o arquivo txt e gera uma matrix aleatoria de tamanho definido dentro do arquivo
+//input:
+//  numeroArquivo: Número para indentificar o arquivo gerado.
+//  altura: Altura da matriz, eixo y.
+//  largura: Largura da matriz, eito x.
+//  matriz: Matriz para se escrever os números aleatorias, e ser alocada dinamicamente na memoria.
 void criaTxt(int numeroArquivo, int altura, int largura, int** matriz){
     char* strNumeroArquivo;
     char caminhoArquivo[CHAR_MAX];
