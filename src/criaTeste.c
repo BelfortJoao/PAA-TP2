@@ -5,7 +5,7 @@
 #include <limits.h>
 #define UPPER 15
 #define LOWER 1
-#define NOME_ARQUIVO "../input/teste"
+#define NOME_ARQUIVO "./input/teste"
 
 // Função para criar números aleatorios e inseri-los em uma matriz de inteiros
 //input:

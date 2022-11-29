@@ -2,7 +2,7 @@
 #include <limits.h>
 #include "achaCaminho.h"
 #include "criaTeste.h"
-#define PATH_ARQUIVO "../input/"
+#define PATH_ARQUIVO "./input/"
 int main(){
     int escolha;
     MapaGalatico map;
