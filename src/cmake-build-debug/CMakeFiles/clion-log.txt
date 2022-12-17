@@ -1,4 +1,0 @@
-/home/belfort/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/belfort/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/bin/ninja/linux/ninja -G Ninja -S /home/belfort/faculdade/PAA/TP2/PAA-TP2/src -B /home/belfort/faculdade/PAA/TP2/PAA-TP2/src/cmake-build-debug
--- Configuring done
--- Generating done
--- Build files have been written to: /home/belfort/faculdade/PAA/TP2/PAA-TP2/src/cmake-build-debug
